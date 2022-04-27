@@ -1,0 +1,15 @@
+:root {
+  --primary-color: #375a7f;
+  --secondary-color: #626262;
+  --success-color: #00bc8c;
+  --danger-color: #e74c3c;
+  --info-color: #17a2b8;
+  --warning-color: #f39c12;
+  --light-color: #9e9e9e;
+  --dark-color: #3b3b3b;
+  --body-color: #212529;
+  --main-border-color: #626262;
+  --main-shadow-color: rgb(13 110 253 / 25%);
+  --main-text-color: #fff;
+  --chevron-down-icon: url(../../assets/images/chevron-down-contrast.svg);
+}

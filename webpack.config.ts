@@ -1,6 +1,7 @@
 import path from 'path';
 import { Configuration } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
 import 'webpack-dev-server';
 
@@ -16,15 +17,15 @@ const config: Configuration = {
         use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
       },
       {
+        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+        type: 'asset',
+      },
+      {
         test: /\.tsx?$/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [
-              '@babel/preset-env',
-              '@babel/preset-react',
-              '@babel/preset-typescript',
-            ],
+            presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
           },
         },
         exclude: /node_modules/,
@@ -39,7 +40,15 @@ const config: Configuration = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
-  plugins: [new HtmlWebpackPlugin({ template: 'index.html' })],
+  plugins: [
+    new HtmlWebpackPlugin({ template: 'index.html' }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/themes', to: 'themes' },
+        { from: 'src/assets', to: 'assets' },
+      ],
+    }),
+  ],
   devServer: {
     open: true,
   },
