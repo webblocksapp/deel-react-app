@@ -6,7 +6,8 @@
     "paths": {
       "@components": ["src/components"],
       "@interfaces": ["src/interfaces"],
-      "@constants": ["src/constants"]
+      "@constants": ["src/constants"],
+      "@layouts": ["src/layouts"]
     }
   },
   "include": ["src"]

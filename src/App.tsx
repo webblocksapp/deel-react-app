@@ -1,19 +1,12 @@
-import { Select, useThemeContext } from '@components';
-import { Theme } from '@interfaces';
+import { Main } from '@layouts';
+
 import React from 'react';
 
 export const App: React.FC = () => {
-  const { setTheme } = useThemeContext();
-
   return (
-    <>
-      <Select
-        onChange={(event) => setTheme(event.target.value as Theme)}
-        options={[
-          { value: 'main.light', label: 'Light' },
-          { value: 'main.dark', label: 'Dark' },
-        ]}
-      />
-    </>
+    <Main>
+      <h3>Auto complete component example</h3>
+      <p>Hello world</p>
+    </Main>
   );
 };

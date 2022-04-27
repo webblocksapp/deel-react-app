@@ -1,0 +1,9 @@
+.brand-logo {
+  background-image: var(--brand-logo);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 30px;
+  max-width: 100px;
+}

@@ -11,5 +11,7 @@
   --main-border-color: #ced4da;
   --main-shadow-color: rgb(13 110 253 / 25%);
   --main-text-color: #212529;
+  --contrast-text-color: #fff;
   --chevron-down-icon: url(../../assets/images/chevron-down.svg);
+  --brand-logo: url(../../assets/images/logo.svg);
 }

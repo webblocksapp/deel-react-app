@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #375a7f;
+  --primary-color: #333;
   --secondary-color: #626262;
   --success-color: #00bc8c;
   --danger-color: #e74c3c;
@@ -11,5 +11,7 @@
   --main-border-color: #626262;
   --main-shadow-color: rgb(13 110 253 / 25%);
   --main-text-color: #fff;
+  --contrast-text-color: #fff;
   --chevron-down-icon: url(../../assets/images/chevron-down-contrast.svg);
+  --brand-logo: url(../../assets/images/logo.svg);
 }

@@ -1,0 +1,5 @@
+header {
+  background-color: var(--primary-color);
+  color: var(--contrast-text-color);
+  padding: 17px;
+}
