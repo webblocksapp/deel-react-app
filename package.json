@@ -2,15 +2,19 @@
   "name": "deel-react-app",
   "version": "1.0.0",
   "scripts": {
-    "start": "webpack serve",
+    "serve": "webpack serve",
+    "start:server": "json-server --watch db.json --port 4200 --delay 300",
+    "start": "npm run serve & npm run start:server",
     "build": "webpack"
   },
   "dependencies": {
+    "axios": "^0.27.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
+    "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
@@ -21,6 +25,7 @@
     "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
+    "json-server": "^0.17.0",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.2.9",
     "ts-node": "^10.7.0",

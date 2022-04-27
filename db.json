@@ -1,0 +1,14 @@
+{
+  "countries": [
+    { "id": 1, "name": "Colombia", "continent": "America" },
+    { "id": 2, "name": "Argentina", "continent": "America" },
+    { "id": 3, "name": "China", "continent": "Asia" },
+    { "id": 4, "name": "New Zealand", "continent": "Australia" },
+    { "id": 5, "name": "Spain", "continent": "Europe" },
+    { "id": 6, "name": "France", "continent": "Europe" },
+    { "id": 7, "name": "Germany", "continent": "Europe" },
+    { "id": 8, "name": "England", "continent": "Europe" },
+    { "id": 9, "name": "Canada", "continent": "America" },
+    { "id": 10, "name": "Mexico", "continent": "America" }
+  ]
+}
