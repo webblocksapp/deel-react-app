@@ -1,15 +1,16 @@
 import React, { SelectHTMLAttributes, useEffect, useState, ChangeEventHandler, useId } from 'react';
-import { SelectOption } from '@interfaces';
 import './index.css';
+import { SelectOption } from '@interfaces';
+import { Label } from '@components';
 
 export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   label?: string;
   options?: SelectOption[];
 }
 
-export const Select: React.FC<SelectProps> = ({ label, options, className = '', ...props }) => {
+export const Select: React.FC<SelectProps> = ({ label, options, className, ...props }) => {
   const id = useId();
-  const [value, setValue] = useState<string | number | readonly string[]>();
+  const [value, setValue] = useState<string | number | readonly string[]>('');
 
   const onChange: ChangeEventHandler<HTMLSelectElement> = (event) => {
     setValue(event.target.value);
@@ -22,11 +23,7 @@ export const Select: React.FC<SelectProps> = ({ label, options, className = '', 
 
   return (
     <>
-      {label && (
-        <label className="form-select-label" htmlFor={id}>
-          {label}
-        </label>
-      )}
+      {label && <Label htmlFor={id}>{label}</Label>}
       <select {...props} value={value} onChange={onChange} className={`form-select ${className}`}>
         {options?.map((option, index) => (
           <option key={index} value={option.value}>
@@ -36,4 +33,8 @@ export const Select: React.FC<SelectProps> = ({ label, options, className = '', 
       </select>
     </>
   );
+};
+Select.defaultProps = {
+  className: '',
+  value: '',
 };

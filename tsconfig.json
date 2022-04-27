@@ -4,10 +4,12 @@
     "jsx": "react-jsx",
     "esModuleInterop": true,
     "paths": {
+      "@apis": ["src/apis"],
       "@components": ["src/components"],
       "@interfaces": ["src/interfaces"],
       "@constants": ["src/constants"],
-      "@layouts": ["src/layouts"]
+      "@layouts": ["src/layouts"],
+      "@utils": ["src/utils"]
     }
   },
   "include": ["src"]

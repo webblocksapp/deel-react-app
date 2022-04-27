@@ -1,12 +1,29 @@
 import React from 'react';
-import { TextField } from '@components';
+import { AutoCompleteInput } from '@components';
 import { Main } from '@layouts';
+import { useCountriesApi } from '@apis';
 
 export const App: React.FC = () => {
+  const countriesApi = useCountriesApi();
+
   return (
     <Main>
-      <h3>Auto complete countries example</h3>
-      <TextField label="Find a country" />
+      <div>
+        <h3>Auto Complete Countries Example</h3>
+        <AutoCompleteInput
+          label="Find by Country"
+          service={countriesApi.list}
+          map={{ primaryText: 'name' }}
+          filterKey="name"
+        />
+        <br />
+        <AutoCompleteInput
+          label="Find by Continent"
+          service={countriesApi.list}
+          map={{ primaryText: 'name', secondaryText: 'continent' }}
+          filterKey="continent"
+        />
+      </div>
     </Main>
   );
 };
