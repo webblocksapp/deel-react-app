@@ -3,6 +3,7 @@ export * from './Content';
 export * from './Header';
 export * from './Logo';
 export * from './Select';
+export * from './TextField';
 export * from './ThemeProvider';
 export * from './ThemeSelector';
 export * from './Toolbar';

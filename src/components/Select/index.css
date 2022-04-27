@@ -1,0 +1,28 @@
+.form-select {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 100%;
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  background-image: var(--chevron-down-icon);
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  border: 1px solid var(--main-border-color);
+  border-radius: 0.25rem;
+  appearance: none;
+  background-color: var(--body-color);
+  color: var(--main-text-color);
+  filter: brightness(100%);
+}
+
+.form-select:focus {
+  border-color: var(--main-focus-color);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem var(--main-shadow-color);
+}
+
+.form-select-label {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
