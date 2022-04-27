@@ -1,6 +1,7 @@
 import path from 'path';
 import { Configuration } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
 import 'webpack-dev-server';
 
 const config: Configuration = {
@@ -32,6 +33,7 @@ const config: Configuration = {
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
+    plugins: [new TsconfigPathsPlugin()],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
