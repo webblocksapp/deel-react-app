@@ -69,7 +69,7 @@ export const AutoCompleteInput: React.FC<AutoCompleteInputProps> = ({
   };
 
   const onKeyDown: KeyboardEventHandler<HTMLInputElement> = (event) => {
-    event.key === 'Escape' && setShow(false);
+    (event.key === 'Escape' || event.key === 'Tab') && setShow(false);
     props.onKeyDown && props.onKeyDown(event);
   };
 
@@ -112,4 +112,5 @@ export const AutoCompleteInput: React.FC<AutoCompleteInputProps> = ({
 };
 AutoCompleteInput.defaultProps = {
   debounce: 300,
+  autoComplete: 'off',
 };
