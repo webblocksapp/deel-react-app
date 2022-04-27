@@ -16,7 +16,13 @@ export const AutoCompleteResult: React.FC = () => {
               }}
               key={index}
             >
-              <span>{result.primaryText}</span> - <small>{result.secondaryText}</small>
+              <span>{result.primaryText}</span>
+              {result.secondaryText && (
+                <>
+                  {' '}
+                  - <small>{result.secondaryText}</small>
+                </>
+              )}
             </li>
           ))
         : match && (

@@ -9,12 +9,13 @@ export const App: React.FC = () => {
   return (
     <Main>
       <div>
-        <h3>Auto Complete Countries Example</h3>
+        <h3>Countries</h3>
         <AutoCompleteInput
-          label="Find by Country"
+          label="Find by Name"
           service={countriesApi.list}
           map={{ primaryText: 'name' }}
           filterKey="name"
+          placeholder="Type a country name"
         />
         <br />
         <AutoCompleteInput
@@ -22,6 +23,7 @@ export const App: React.FC = () => {
           service={countriesApi.list}
           map={{ primaryText: 'name', secondaryText: 'continent' }}
           filterKey="continent"
+          placeholder="Type a continent name"
         />
       </div>
     </Main>
