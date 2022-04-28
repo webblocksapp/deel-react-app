@@ -3,6 +3,7 @@ import { Configuration } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
+import Dotenv from 'dotenv-webpack';
 import 'webpack-dev-server';
 
 const config: Configuration = {
@@ -36,6 +37,7 @@ const config: Configuration = {
     filename: 'bundle.js',
   },
   plugins: [
+    new Dotenv({ path: '.env' }),
     new HtmlWebpackPlugin({ template: 'index.html' }),
     new CopyPlugin({
       patterns: [
