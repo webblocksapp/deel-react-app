@@ -4,20 +4,20 @@ React + Typescript technical test by implementing an autocomplete component with
 
 ## Quick Start
 
-Open a terminal at project's root folder and run the following:
-
-```bash
-yarn
-yarn start
-```
-
-At root folder, define the `.env` file as follows:
+At project's root folder, define the `.env` file as follows:
 
 ```bash
 API_ROOT=http://localhost:4200
 ```
 
 By default `API_ROOT` is `http://localhost:4200`, which is the port where runs `json-server`, a local simulated backend.
+
+Open a terminal at project's root folder and run the following:
+
+```bash
+yarn
+yarn start
+```
 
 ## Folder structure
 
