@@ -105,7 +105,11 @@ export const AutoCompleteInput: React.FC<AutoCompleteInputProps> = ({
       <Label>{label}</Label>
       <div ref={ref}>
         <TextField {...props} onInput={onInput} onKeyDown={onKeyDown} onFocus={onFocus} value={match} />
-        <div style={{ position: 'relative' }}>{show && <AutoCompleteResult />}</div>
+        {show && (
+          <div style={{ position: 'relative' }}>
+            <AutoCompleteResult />
+          </div>
+        )}
       </div>
     </AutoCompleteInputContext.Provider>
   );

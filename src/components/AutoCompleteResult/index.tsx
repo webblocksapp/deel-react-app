@@ -7,7 +7,7 @@ export const AutoCompleteResult: React.FC = () => {
 
   return (
     <ul className="autocomplete-result">
-      {Boolean(results.length)
+      {Boolean(results?.length)
         ? results.map((result, index) => (
             <li
               onClick={() => {
