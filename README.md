@@ -4,7 +4,7 @@ React + Typescript technical test by implementing an autocomplete component with
 
 ## Quick Start
 
-You can start the project by running the following in your terminal at root folder:
+Open a terminal at project's root folder and run the following:
 
 ```bash
 yarn
@@ -35,7 +35,7 @@ By default `API_ROOT` is `http://localhost:4200`, which is the port where runs `
 ## Additional notes
 
 - Webpack, tsconfig and jest definitions were done from scratch.
-- Project coverage is at 100%, for executing tests run:
+- Project coverage is at 100%. For executing tests run:
 
 ```bash
 yarn test
